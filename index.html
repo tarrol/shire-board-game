@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Drinking Games</title>
+  <!-- CSS styling links-->
   <link rel="stylesheet" href="./assets/reset.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css"
-    crossorigin="anonymous" />
+  <link rel="stylesheet"
+  href=
+"https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" 
+  crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/style.css" />
+    
+<!-- Compressed JavaScript (Foundation JS from CDN) -->
+<script src=
+"https://cdnjs.cloudflare.com/ajax/libs/foundation/6.0.1/js/vendor/jquery.min.js">
+</script>
+<script src=
+"https://cdn.jsdelivr.net/npm/foundation-sites@6.5.1/dist/js/foundation.min.js"
+    crossorigin="anonymous">
+</script>
 </head>
 
 <body>
@@ -24,8 +35,22 @@
         <h2>Board Game</h2>
         <!--img place holder-->
         <img src="#" id="gamepic" />
-        <p>Description: <span id="gamedscrpt"></span></p>
-        <!--buttons here-->
+        <p>Description: <span id="gamedscrpt"></span>
+          <!--slider for number of players select-->
+          <div class="grid-x grid-margin-x">
+            <div class="cell small-10">
+              <div class="slider" data-slider data-initial-start="0" data-end="12" data-step="1">
+                <span class="slider-handle"  data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput2"></span>
+                <span class="slider-fill" data-slider-fill></span>
+              </div>
+            </div>
+            <div class="cell small-2">
+              <input type="number" id="sliderOutput2">
+            </div>
+          </div>
+        </p>
+        <!--Favorites checkbox for game-->
+        <input id="checkbox1" type="checkbox">
         <button id="saveGame" class="saveFavorites">Save to Favorites?</button>
         <button id="randomGame" class="generateBtn">Randomizer</button>
       </div>
@@ -34,11 +59,13 @@
         <!--img place holder-->
         <img src="#" id="drinkpic" />
         <p>Description: <span id="drinkdscrpt"></span></p>
-        <!--buttons here-->
+        <!-- favorites checkbox for drinks-->
+        <input id="checkbox2" type="checkbox">
         <button id="saveDrink" class="saveFavorites">Save to Favorites?</button>
         <button id="randomDrink" class="generateBtn">Randomizer</button>
       </div>
     </div>
+    <!-- section for tabs and accessing favorites-->
     <aside id="favorites">
       <div class="grid-container">
         <div class="grid-x align-right">
@@ -58,44 +85,59 @@
             <div class="tabs-content vertical" data-tabs-content="example-tabs">
               <div class="tabs-panel is-active hide" id="panel1v">
                 <p>One</p>
-                <p>Check me out! I'm a super cool Tab panel with text content!</p>
+                <p>
+                  Check me out! I'm a super cool Tab panel with text content!
+                </p>
               </div>
               <div class="tabs-panel" id="panel2v">
                 <p>Two</p>
-                <img class="thumbnail" src="assets/img/generic/rectangle-7.jpg" />
+                <img
+                  class="thumbnail"
+                  src="assets/img/generic/rectangle-7.jpg"
+                />
               </div>
               <div class="tabs-panel" id="panel3v">
                 <p>Three</p>
-                <p>Check me out! I'm a super cool Tab panel with text content!</p>
+                <p>
+                  Check me out! I'm a super cool Tab panel with text content!
+                </p>
               </div>
               <div class="tabs-panel" id="panel4v">
                 <p>Four</p>
-                <img class="thumbnail" src="assets/img/generic/rectangle-2.jpg" />
+                <img
+                  class="thumbnail"
+                  src="assets/img/generic/rectangle-2.jpg"
+                />
               </div>
               <div class="tabs-panel" id="panel5v">
                 <p>Five</p>
-                <p>Check me out! I'm a super cool Tab panel with text content!</p>
+                <p>
+                  Check me out! I'm a super cool Tab panel with text content!
+                </p>
               </div>
               <div class="tabs-panel" id="panel6v">
                 <p>Six</p>
-                <img class="thumbnail" src="assets/img/generic/rectangle-8.jpg" />
+                <img
+                  class="thumbnail"
+                  src="assets/img/generic/rectangle-8.jpg"
+                />
               </div>
             </div>
           </div>
         </div>
       </div>
+      <!-- pop out favorites content-->
     </aside>
-
-  </main>
-
-  <script src="js/vendor/jquery.js"></script>
-  <script src="js/vendor/what-input.js"></script>
-  <script src="js/vendor/foundation.min.js"></script>
-  <script>
-    $(document).foundation();
+    <div id="maincontent">
+      <div id="boardgame" class="suggestions">
+        Board Game Box
+      </div>
+      <div id="drink" class="suggestions">Drink Box
+      </div>
+      </div>
+    </div>
+    <script>
+      $(document).foundation();
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js"
-    crossorigin="anonymous"></script>
-</body>
-
+  </body>
 </html>
