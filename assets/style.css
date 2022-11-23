@@ -6,3 +6,13 @@ header{
     line-height: 4rem;
     font-size: 2rem;
 }
+#maincontent{
+    display: flex;
+}
+.suggestions{
+    border: 1px solid black;
+    min-height: 100px;
+    padding: 7px;
+    line-height: 1.3rem;
+    width: 50%;
+}
