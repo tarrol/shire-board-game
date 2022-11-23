@@ -4,7 +4,10 @@ header {
   text-align: center;
   width: 100%;
   line-height: 4rem;
-  font-size: 2rem;
+  font-size: 1rem;
+}
+h1{
+    font-size: 2rem;
 }
 
 main {
@@ -29,4 +32,15 @@ main {
   width: 50%;
   margin: 5px;
   text-align: center;
+}
+.suggestions{
+    border: 1px solid black;
+    min-height: 100px;
+    padding: 7px;
+    line-height: 1.3rem;
+    width: 50%;
+    margin: 5px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px 0px;
 }
