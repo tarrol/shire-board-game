@@ -1,4 +1,3 @@
-
 header {
   background-color: brown;
   color: whitesmoke;
@@ -10,21 +9,29 @@ header {
 h1{
     font-size: 2rem;
 }
-main{
-    display: flex;
+
+main {
+  display: flex;
 }
 
 .tabs-content {
   width: 250px;
   height: fit-content;
-
 }
 
-
-#maincontent{
-    display: flex;
-    width:70%;
-    margin: 5px;
+#maincontent {
+  display: flex;
+  width: 70%;
+  margin: 5px;
+}
+.suggestions {
+  border: 1px solid black;
+  min-height: 100px;
+  padding: 7px;
+  line-height: 1.3rem;
+  width: 50%;
+  margin: 5px;
+  text-align: center;
 }
 .suggestions{
     border: 1px solid black;
@@ -37,4 +44,3 @@ main{
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px 0px;
 }
-
