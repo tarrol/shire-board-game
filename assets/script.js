@@ -1,8 +1,8 @@
 var drinksKey = "1"
 var drinksUrl = "https://www.thecocktaildb.com/api/json/v2/" + drinksKey + "/random.php"
 var gamesKey = "ev1uDl61ro"
-var minPlayers = 2
-var gamesUrl = "https://api.boardgameatlas.com/api/search?random=true&min_players=" + minPlayers + "&client_id=" + gamesKey
+var numPlayers = 4
+var gamesUrl = "https://api.boardgameatlas.com/api/search?random=true&gt_max_players=" + numPlayers-- + "&lt_min_players=" + numPlayers++ + "&client_id=" + gamesKey
 
 fetch (drinksUrl)
     .then(function(response) {
