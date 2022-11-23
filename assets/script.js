@@ -11,6 +11,13 @@ function fetchDrink() {
         })
         .then(function(data) {
             console.log(data);
+            // Place drink image
+            var drinkPic = document.getElementById("drinkpic");
+            drinkPic.setAttribute("src", data.drinks[0].strDrinkThumb);
+            // Place drink instructions
+            var drinkInstruc = document.getElementById("drinkdscrpt");
+            drinkInstruc.textContent = data.drinks[0].strInstructions
+
         })
 }
 
@@ -21,5 +28,12 @@ function fetchGame() {
         })
         .then(function(data) {
             console.log(data);
+            // Place board game image
+            var gamePic = document.getElementById("gamepic");
+            gamePic.setAttribute("src", data.games[0].image_url);
+            // Place board game description
+            var gameDescrip = document.getElementById("gamedscrpt");
+            gameDescrip.textContent = data.games[0].description_preview;
+
         })
 }
