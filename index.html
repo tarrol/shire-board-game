@@ -13,7 +13,7 @@
   crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/style.css" />
     
-<!-- Compressed JavaScript (Foundation JS from CDN) -->
+<!-- Needs to call JS at the top not bottom for Foundation -->
 <script src=
 "https://cdnjs.cloudflare.com/ajax/libs/foundation/6.0.1/js/vendor/jquery.min.js">
 </script>
@@ -32,13 +32,14 @@
     <div id="maincontent">
       <div id="boardgame" class="suggestions">
         <h2>Board Game Box</h2>
+        <button class="hollow button" href="#" id="randomGame">Randomize</button>
         <!--img place holder-->
         <img src="#" id="gamepic" />
         <p>Description: <span id="gamedscrpt"></span>
           <!--slider for number of players select-->
           <div class="grid-x grid-margin-x">
             <div class="cell small-10">
-              <div class="slider" data-slider data-initial-start="0" data-end="12" data-step="1">
+              <div class="slider" data-slider data-initial-start="1" data-end="16" data-step="1">
                 <span class="slider-handle"  data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput2"></span>
                 <span class="slider-fill" data-slider-fill></span>
               </div>
@@ -50,17 +51,19 @@
         </p>
         <!--Favorites checkbox for game-->
         <input id="checkbox1" type="checkbox">
+        
         <button id="saveGame" class="saveFavorites">Save to Favorites?</button>
       </div>
       <div id="drink" class="suggestions">
         <h2>Drink</h2>
+        <button class="hollow button" href="#" id="randomDrink">Randomize</button>
         <!--img place holder-->
         <img src="#" id="drinkpic" />
         <p>Description: <span id="drinkdscrpt"></span></p>
         <!-- favorites checkbox for drinks-->
         <input id="checkbox2" type="checkbox">
         <button id="saveDrink" class="saveFavorites">Save to Favorites?</button>
-      </div>
+  </div>
     </div>
     <!-- section for tabs and accessing favorites-->
     <aside id="favorites">
