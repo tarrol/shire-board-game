@@ -8,14 +8,20 @@ header {
   font-size: 2rem;
 }
 
+main{
+    display: flex;
+}
+
 .tabs-content {
   width: 250px;
   height: fit-content;
+
 }
 
 
 #maincontent{
     display: flex;
+    width:70%
 }
 .suggestions{
     border: 1px solid black;
