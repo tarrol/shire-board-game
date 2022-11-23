@@ -7,9 +7,7 @@ header {
   font-size: 2rem;
 }
 
-.grid-container {
-  margin-right: -200px;
-}
 .tabs-content {
-  width: 150px;
+  width: 250px;
+  height: fit-content;
 }
