@@ -1,11 +1,19 @@
-header{
-    background-color: brown;
-    color: whitesmoke;
-    text-align: center;
-    width: 100%;
-    line-height: 4rem;
-    font-size: 2rem;
+
+header {
+  background-color: brown;
+  color: whitesmoke;
+  text-align: center;
+  width: 100%;
+  line-height: 4rem;
+  font-size: 2rem;
 }
+
+.tabs-content {
+  width: 250px;
+  height: fit-content;
+}
+
+
 #maincontent{
     display: flex;
 }
@@ -16,3 +24,4 @@ header{
     line-height: 1.3rem;
     width: 50%;
 }
+
