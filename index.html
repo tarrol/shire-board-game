@@ -33,8 +33,20 @@
         <h2>Board Game Box</h2>
         <!--img place holder-->
         <img src="#" id="gamepic" />
-        <p>Description: <span id="gamedscrpt"></span></p>
-        <!--button here-->
+        <p>Description: <span id="gamedscrpt"></span>
+          <div class="grid-x grid-margin-x">
+            <div class="cell small-10">
+              <div class="slider" data-slider data-initial-start="1" data-end="12" data-step="1">
+                <span class="slider-handle"  data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput2"></span>
+                <span class="slider-fill" data-slider-fill></span>
+              </div>
+            </div>
+            <div class="cell small-2">
+              <input type="number" id="sliderOutput2">
+            </div>
+          </div>
+        </p>
+        <input id="checkbox1" type="checkbox">
         <button id="saveGame" class="saveFavorites">Save to Favorites?</button>
       </div>
       <div id="drink" class="suggestions">
@@ -42,7 +54,7 @@
         <!--img place holder-->
         <img src="#" id="drinkpic" />
         <p>Description: <span id="drinkdscrpt"></span></p>
-        <!--button here-->
+        <input id="checkbox2" type="checkbox">
         <button id="saveDrink" class="saveFavorites">Save to Favorites?</button>
       </div>
     </div>
@@ -110,17 +122,6 @@
     <div id="maincontent">
       <div id="boardgame" class="suggestions">
         Board Game Box
-        <div class="grid-x grid-margin-x">
-          <div class="cell small-10">
-            <div class="slider" data-slider data-initial-start="1" data-end="12" data-step="1">
-              <span class="slider-handle"  data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput2"></span>
-              <span class="slider-fill" data-slider-fill></span>
-            </div>
-          </div>
-          <div class="cell small-2">
-            <input type="number" id="sliderOutput2">
-          </div>
-        </div>
       </div>
       <div id="drink" class="suggestions">Drink Box
       </div>
